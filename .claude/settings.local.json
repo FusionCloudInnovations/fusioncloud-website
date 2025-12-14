@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "mcp__aws-documentation__search_documentation",
+      "mcp__clickup__clickup_get_workspace_hierarchy",
+      "Bash(python:*)",
+      "mcp__clickup__clickup_search",
+      "mcp__clickup__clickup_create_list",
+      "mcp__clickup__clickup_create_task",
+      "mcp__clickup__clickup_get_list",
+      "mcp__clickup__clickup_update_task",
+      "Bash(curl:*)",
+      "mcp__MCP_DOCKER__obsidian_list_files_in_vault",
+      "mcp__MCP_DOCKER__obsidian_list_files_in_dir",
+      "mcp__MCP_DOCKER__obsidian_append_content"
+    ]
+  }
+}
