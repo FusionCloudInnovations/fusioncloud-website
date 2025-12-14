@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-display: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  * {
+    @apply border-fusion-gray-300;
+  }
+
+  body {
+    @apply bg-brand-black text-white/70 antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply text-white font-semibold;
+  }
+
+  h4, h5, h6 {
+    @apply text-white/95 font-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
