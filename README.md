@@ -67,4 +67,3 @@ fusioncloud-website/
 ---
 
 **FusionCloud Innovations** - Purpose-driven work that doesn't drain the people who bring it to life.
-# Testing direct push - should fail
