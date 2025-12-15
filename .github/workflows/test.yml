@@ -1,0 +1,48 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - main
+      - staging
+  push:
+    branches:
+      - 'feature/**'
+
+env:
+  NODE_VERSION: '18.x'
+
+jobs:
+  test:
+    name: Run Tests and Type-Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run TypeScript type-check
+        run: npm run type-check
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Test build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: https://api-staging.fusioncloudinnovations.com
+          NEXT_PUBLIC_SITE_URL: https://staging.fusioncloudinnovations.com
+
+      - name: Check bundle size
+        run: |
+          BUILD_SIZE=$(du -sh out | cut -f1)
+          echo "📦 Build size: $BUILD_SIZE"

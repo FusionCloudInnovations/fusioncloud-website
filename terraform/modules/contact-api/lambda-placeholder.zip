@@ -1,0 +1,7 @@
+PLACEHOLDER - Replace this file with actual Lambda function code in ZIP format before deploying.
+
+To create the Lambda package:
+1. Create lambda/contact-form/src/index.js with the handler function
+2. Run: cd lambda/contact-form && npm install
+3. Run: zip -r function.zip .
+4. Replace this file with function.zip or update the filename reference in lambda.tf

@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars and fill in actual values
+# terraform.tfvars is gitignored for security
+
+aws_region      = "us-east-1"
+domain_name     = "fusioncloudinnovations.com"
+route53_zone_id = "Z0123456789ABCDEFGHIJ"  # Replace with actual zone ID
+contact_email   = "info@fusioncloudinnovations.com"
